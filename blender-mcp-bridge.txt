@@ -1,0 +1,20 @@
+blender-mcp-bridge/
+├── mcp_servers/
+│   ├── blender_core_server.py      # Main Blender state server
+│   ├── mesh_operations_server.py   # Mesh manipulation
+│   ├── animation_server.py         # Keyframes, drivers, constraints
+│   ├── material_server.py          # Shader nodes, materials
+│   └── scene_monitor_server.py     # Real-time state tracking
+├── blender_addon/
+│   ├── __init__.py                 # Main addon entry
+│   ├── mcp_bridge.py              # IPC communication layer  
+│   ├── state_serializer.py       # Scene -> JSON converter
+│   └── operation_handler.py       # Execute MCP commands in Blender
+├── ai_integration/
+│   ├── llammy_client.py           # Ollama/Llammy interface
+│   ├── mcp_orchestrator.py       # Manages all MCP connections
+│   └── decision_engine.py         # AI decision making logic
+└── datasets/
+    ├── operations_log/            # All MCP operations for training
+    ├── scene_states/             # Before/after snapshots  
+    └── error_recovery/           # Self-debugging data
